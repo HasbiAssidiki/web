@@ -1,0 +1,373 @@
+/* Font & Reset */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #f9f8f6;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* Container */
+.container {
+  max-width: 1100px;
+  margin: auto;
+  padding: 1.5rem;
+}
+
+/* Header */
+header {
+  background-color: #2f2f2f;
+  color: white;
+  padding: 1rem 0;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+  text-align: center;
+  font-size: 2rem;
+}
+
+nav {
+  text-align: center;
+  margin-top: 0.5rem;
+}
+
+nav a {
+  color: #ddd;
+  margin: 0 1rem;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+nav a:hover {
+  color: #00aa55;
+}
+
+/* Hero Section */
+.hero {
+  background: url('images/hero.jpg') center/cover no-repeat;
+  height: 90vh;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.overlay {
+  background-color: rgba(0, 0, 0, 0.55);
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-content {
+  text-align: center;
+  color: #fff;
+  padding: 2rem;
+}
+
+.hero-content h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.hero-content p {
+  font-size: 1.1rem;
+  max-width: 600px;
+  margin: 0 auto 1.5rem;
+}
+
+.btn {
+  background-color: #00aa55;
+  color: white;
+  padding: 0.7rem 1.5rem;
+  border-radius: 8px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #007f3b;
+}
+
+/* Tentang */
+.tentang {
+  background-color: #fff;
+  padding: 3rem 1.5rem;
+  text-align: center;
+}
+
+.tentang h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.tentang p {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* Kategori */
+.kategori {
+  padding: 3rem 1.5rem;
+  background-color: #f0efec;
+  text-align: center;
+}
+
+.kategori h2 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+
+.kategori-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.5rem;
+}
+
+.kategori-item {
+  background-color: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.07);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-decoration: none;
+  color: #333;
+}
+
+.kategori-item:hover {
+  transform: scale(1.04);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+}
+
+.kategori-item img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.kategori-item h3 {
+  padding: 1rem;
+  background-color: #fafafa;
+  font-size: 1.1rem;
+  border-top: 1px solid #eee;
+}
+
+.kategori-item.nonaktif {
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+/* Footer */
+footer {
+  background-color: #2f2f2f;
+  color: white;
+  text-align: center;
+  padding: 1.5rem;
+  margin-top: 3rem;
+}
+
+footer a {
+  color: #00aa55;
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+/* WhatsApp Floating Icon */
+.wa-float {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 99;
+}
+
+.wa-float img {
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+@media (max-width: 600px) {
+    header h1 {
+      font-size: 1.4rem;
+    }
+  
+    nav a {
+      display: inline-block;
+      margin: 0.5rem;
+      font-size: 0.9rem;
+    }
+  
+    .hero-content h2 {
+      font-size: 1.5rem;
+    }
+  
+    .hero-content p {
+      font-size: 0.9rem;
+    }
+  
+    .btn {
+      font-size: 0.9rem;
+      padding: 0.5rem 1.2rem;
+    }
+  
+    .kategori-item h3 {
+      font-size: 1rem;
+      padding: 0.7rem;
+    }
+  
+    footer p {
+      font-size: 0.85rem;
+    }
+  }
+/* FORM ORDER STYLING */
+.form-order {
+  max-width: 600px;
+  margin: 0 auto;
+  background: #ffffff;
+  padding: 2.5rem 2rem;
+  border-radius: 16px;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+  font-family: 'Poppins', sans-serif;
+}
+
+.form-order label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+  color: #2c3e50;
+  font-size: 1rem;
+}
+
+.form-order input,
+.form-order select,
+.form-order textarea {
+  width: 100%;
+  padding: 0.9rem 1rem;
+  margin-bottom: 1.5rem;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  font-size: 1rem;
+  font-family: 'Poppins', sans-serif;
+  transition: border 0.3s ease, box-shadow 0.3s ease;
+}
+
+.form-order input:focus,
+.form-order select:focus,
+.form-order textarea:focus {
+  border-color: #26ae60;
+  box-shadow: 0 0 5px rgba(38, 174, 96, 0.5);
+  outline: none;
+}
+
+.form-order textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+.form-order .btn-order {
+  display: inline-block;
+  background: #26ae60;
+  color: #fff;
+  padding: 0.9rem 2rem;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 1rem;
+  transition: background 0.3s ease;
+  text-decoration: none;
+  text-align: center;
+}
+
+.form-order .btn-order:hover {
+  background: #1e8b4c;
+}
+/* TESTIMONI */
+.testimoni {
+  background: #f6f6f6;
+  padding: 3rem 0;
+}
+
+.testi-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+}
+
+.testi-item {
+  background: #fff;
+  border-radius: 16px;
+  padding: 2rem;
+  text-align: center;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.06);
+  transition: transform 0.3s ease;
+}
+
+.testi-item:hover {
+  transform: translateY(-5px);
+}
+
+.testi-item img {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-bottom: 1rem;
+}
+
+.testi-item h4 {
+  margin-bottom: 0.5rem;
+  font-size: 1.1rem;
+  color: #26ae60;
+}
+
+.testi-item p {
+  font-size: 0.95rem;
+  color: #333;
+  line-height: 1.5;
+}
+/* FAQ STYLING */
+.faq {
+  padding: 3rem 0;
+  background: #fdfdfd;
+}
+
+.faq-item {
+  background: #fff;
+  border-radius: 12px;
+  padding: 1.5rem 2rem;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.05);
+  transition: all 0.3s ease;
+}
+
+.faq-item:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 24px rgba(0,0,0,0.08);
+}
+
+.faq-item h4 {
+  margin-bottom: 0.5rem;
+  font-size: 1.1rem;
+  color: #2c3e50;
+}
+
+.faq-item p {
+  font-size: 0.95rem;
+  color: #555;
+  line-height: 1.6;
+}

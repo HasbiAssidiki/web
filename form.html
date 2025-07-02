@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Form Order - Putri Musik Production</title>
+  <link rel="stylesheet" href="gaya.css" />
+  <script>
+    function kirimWA(event) {
+      event.preventDefault();
+      const nama = document.getElementById("nama").value;
+      const produk = document.getElementById("produk").value;
+      const custom = document.getElementById("custom").value;
+      const kontak = document.getElementById("kontak").value;
+
+      const pesan = `Halo, saya ingin pesan produk:\n\n📦 Produk: ${produk}\n🙋 Nama: ${nama}\n📞 Kontak: ${kontak}\n🎨 Custom Request:\n${custom}`;
+
+      const linkWA = `https://wa.me/6285693490257?text=${encodeURIComponent(pesan)}`;
+      window.open(linkWA, '_blank');
+    }
+  </script>
+</head>
+<body>
+
+  <header>
+    <div class="container">
+      <h1>Putri Musik Production</h1>
+      <nav>
+        <a href="index.html">Beranda</a>
+        <a href="index.html#kategori">Kategori</a>
+        <a href="#kontak">Kontak</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="tentang">
+    <div class="container">
+      <h2>Formulir Pemesanan</h2>
+      <p>Silakan isi formulir di bawah ini untuk melakukan pemesanan alat musik custom.</p>
+    </div>
+  </section>
+
+  <section class="kategori">
+    <div class="container">
+      <form onsubmit="kirimWA(event)" class="form-order">
+        <label for="nama">Nama Lengkap:</label>
+        <input type="text" id="nama" name="nama" required>
+
+        <label for="kontak">Nomor WhatsApp:</label>
+        <input type="tel" id="kontak" name="kontak" required>
+
+        <label for="produk">Produk yang Dipesan:</label>
+        <select id="produk" name="produk">
+          <option value="Gitar Akustik">Gitar Akustik</option>
+          <option value="Cajon">Cajon</option>
+          <option value="Kalimba">Kalimba</option>
+          <option value="Marawis">Marawis</option>
+          <option value="Terbangan">Terbangan</option>
+          <option value="Snare Drumband">Snare Drumband</option>
+          <option value="Bass Drumband">Bass Drumband</option>
+          <option value="Simbal">Simbal</option>
+          <option value="Lainnya">Lainnya</option>
+        </select>
+
+        <label for="custom">Permintaan Custom (opsional):</label>
+        <textarea id="custom" name="custom" rows="4" placeholder="Contoh: warna merah, sablon nama grup, bahan kayu jati..."></textarea>
+
+        <button type="submit" class="btn-order">Kirim ke WhatsApp</button>
+      </form>
+    </div>
+  </section>
+
+  <footer id="kontak">
+    <div class="container">
+      <p>&copy; 2025 Putri Musik Production</p>
+      <p>
+        WhatsApp: <a href="https://wa.me/6285693490257" target="_blank">0856-9349-0257</a> |
+        Instagram: <a href="https://instagram.com/putri_musik" target="_blank">@putri_musik</a> |
+        Lokasi: <a href="https://maps.app.goo.gl/a3RrT6y1NVCnRCkaA" target="_blank">Google Maps</a>
+      </p>
+    </div>
+  </footer>
+
+  <!-- WhatsApp Floating -->
+  <a href="https://wa.me/6285693490257" class="wa-float" target="_blank">
+    <img src="images/wa.png" alt="Chat WhatsApp" />
+  </a>
+
+</body>
+</html>
